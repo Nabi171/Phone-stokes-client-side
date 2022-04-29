@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Card } from 'react-bootstrap';
 const ManagePhones = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
@@ -26,10 +27,13 @@ const ManagePhones = () => {
             <h2>Manage your services</h2>
             {
                 items.map(item => <div key={item._id}>
-                    <h5>{item.Name || item.name}
+                    <Card className='shadow'>
+                        <img src={item.ImgLink} alt="" />
+                        <p>{item.Name || item.name}</p>
 
 
-                        <button onClick={() => handleDelete(item._id)}>X</button></h5>
+
+                        <button className='btn btn-danger' onClick={() => handleDelete(item._id)}>Delete</button></Card>
 
                 </div>)
             }
