@@ -6,7 +6,5 @@ const useItems = () => {
         fetch('items.json').then(res => res.json()).then(data => setItems(data))
     }, [])
     return [items, setItems]
-
 };
-
 export default useItems;

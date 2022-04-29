@@ -38,7 +38,7 @@ const Additems = () => {
                     <label className='form-label'>Img Link</label>
                     <input placeholder='Img Url' {...register("imageLink")} className="form-input" type="text" />
 
-                    <button className='form-btn' type="submit">Add Service</button>
+                    <button  className='form-btn' type="submit">Add Phones</button>
                 </div>
             </form>
         </div>
