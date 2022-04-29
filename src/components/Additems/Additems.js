@@ -17,7 +17,7 @@ const Additems = () => {
                 console.log(result);
             })
     };
-
+    //sent to backend by post method
     return (
         <div className='w-50 mx-auto'>
             <form onSubmit={handleSubmit(onSubmit)} className="container-form text-center form-all">
