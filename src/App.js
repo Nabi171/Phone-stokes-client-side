@@ -11,6 +11,10 @@ import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import RequireAuth from './components/RequiredAuth/RequireAuth';
+import Additems from './components/Additems/Additems';
+import AllPhones from './components/AllPhones/AllPhones';
+import ManagePhones from './components/ManagePhones/ManagePhones';
+
 function App() {
   return (
     <div className="App">
@@ -20,6 +24,9 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
+        <Route path="/allphones" element={<AllPhones />} />
+        <Route path="/managephones" element={<ManagePhones />} />
+        <Route path="/additems" element={<Additems />} />
         <Route path='/selected/:id' element={
           <RequireAuth>
             <Selected></Selected>

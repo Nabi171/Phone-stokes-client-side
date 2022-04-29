@@ -30,6 +30,15 @@ const Header = () => {
                                 <NavLink
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
                                     to="/about">About</NavLink >
+                                <NavLink
+                                    className={({ isActive }) => isActive ? "active-link" : "link"}
+                                    to="/allphones">AllPhones</NavLink >
+                                <NavLink
+                                    className={({ isActive }) => isActive ? "active-link" : "link"}
+                                    to="/managePhones">ManagePhones</NavLink >
+                                <NavLink
+                                    className={({ isActive }) => isActive ? "active-link" : "link"}
+                                    to="/additems">Additem</NavLink >
 
                                 {user ?
                                     <NavLink onClick={() => signOut(auth)}
