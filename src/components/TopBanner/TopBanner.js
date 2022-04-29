@@ -17,5 +17,4 @@ const TopBanner = () => {
         </div>
     );
 };
-
 export default TopBanner;

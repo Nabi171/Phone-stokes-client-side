@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useItems from '../hooks/useItems';
 import ShowItem from '../ShowItem/ShowItem';
-
 const Inventory = () => {
     const [items, setItems] = useItems();
     return (
@@ -14,6 +13,5 @@ const Inventory = () => {
         </div>
     );
 };
-
 export default Inventory;
 
