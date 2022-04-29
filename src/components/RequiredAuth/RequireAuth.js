@@ -1,12 +1,11 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
 import { useLocation, Navigate } from 'react-router';
+import auth from '../firebase.init';
 import Loading from '../Loading/Loading';
 const RequireAuth = ({ children }) => {
     const [user, loading] = useAuthState(auth);
     let location = useLocation();
-
     if (loading) {
         <Loading />
     }
@@ -15,5 +14,4 @@ const RequireAuth = ({ children }) => {
     }
     return children;
 };
-
 export default RequireAuth;

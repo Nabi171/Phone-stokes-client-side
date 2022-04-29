@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router';
 import auth from '../firebase.init';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
-
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+import Loading from '../Loading/Loading';
+import OthersLogin from '../OthersLogin/OthersLogin';
 const SignUp = () => {
-    //use firebase github hooks for create user
     const [
         createUserWithEmailAndPassword,
         user,
         loading
     ] = useCreateUserWithEmailAndPassword(auth);
-
-    //use firebase github hooks for email verification
+    //use firebase github for emailCreate user
     const [sendEmailVerification, sending] = useSendEmailVerification(auth);
+    //use firebase github hooks for email verification
     const [email, SetEmail] = useState();
     const [password, SetPassword] = useState();
     const [confirmPassword, SetConfirnPassword] = useState();
@@ -22,10 +23,9 @@ const SignUp = () => {
         SetEmail(e.target.value);
     }
     const navigate = useNavigate();
-
-    // if (loading) {
-    //     <Loading />
-    // }
+    if (loading) {
+        <Loading />
+    }
     if (user) {
         navigate('/home')
     }
@@ -46,34 +46,45 @@ const SignUp = () => {
         }
 
         if (email && password && confirmPassword) {
-
             await createUserWithEmailAndPassword(email, password);
         }
         await sendEmailVerification()
-        alert('Sent email for verification');
+        alert('Sent email');
     }
+
     return (
         <div className='form-all mx-auto container mt-4' >
-            <form className="container-form text-center form-all" onClick={handleUser}>
+            <form onSubmit={handleUser} className="container-form text-center form-all">
                 <div className="form-title">Sign Up</div>
                 <div className="inputs-form">
                     <label className='form-label'>EMAIL</label>
                     <input onBlur={handleEmail} className="form-input" type="email" placeholder="example@test.com" required />
                     <label className='form-label'>PASSWORD</label>
                     <input onBlur={handlePassword} className="form-input" type="password" placeholder="Min 6 charaters long" required />
-                    <label onBlur={handleConfirmPassword} className='form-label'>CONFIRM PASSWORD</label>
-                    <input className="form-input" type="password" placeholder="Min 6 charaters long" required />
+                    <label className='form-label'>CONFIRM PASSWORD</label>
+                    <input onBlur={handleConfirmPassword} className="form-input" type="password" placeholder="Min 6 charaters long" required />
                     <p style={{ color: 'red' }}>
                         {error}
                     </p>
                     <button className='form-btn' type="submit">SIGN UP</button>
                 </div>
+
+
+
+
+                <br />
+                <p className='fw bold'>Already have an account? <Link to='/login' className='text-danger pe-auto text-decoration-none fw-bold'>Please Login</Link></p>
+                <div>
+                    <OthersLogin></OthersLogin>
+                </div>
+
             </form>
-            <br />
-            <p className='fw bold'>Already have an account? <Link to='/login' className='text-danger pe-auto text-decoration-none fw-bold'>Please Login</Link></p>
+
+
         </div>
     );
 };
+
 export default SignUp;
 
 

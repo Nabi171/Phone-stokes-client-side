@@ -10,6 +10,7 @@ import Selected from './components/SelectedItem/Selected';
 import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
+import RequireAuth from './components/RequiredAuth/RequireAuth';
 function App() {
   return (
     <div className="App">
@@ -20,10 +21,9 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path='/selected/:id' element={
-
-          <Selected></Selected>
-
-
+          <RequireAuth>
+            <Selected></Selected>
+          </RequireAuth>
         } />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
