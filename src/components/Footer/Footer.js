@@ -9,14 +9,14 @@ const Footer = () => {
                 <Grid container>
                     <Grid item xs={12} md={5}>
                         <Typography variant='h5'>
-                            NURS ZONE
+                            NURS PHONE STOKES
                         </Typography>
                         <Box sx={{ my: '5%' }}>
                             <Typography variant='h6'>
                                 About us
                             </Typography>
                             <Typography variant='body1' sx={{ textAlign: 'justify' }}>
-                                Thanks for visiting my site,Basically i am a Robotic Engineer.I compelted my Engnr. deg from CUET(EEE).I in my Scientific Zone you will get all kinds of Scientific instruments.I specially work for those type of people who can not walk,talk or move.
+                                Thanks for visiting my site,Basically this is made for admin pannel ,you have no right to stokes change without our permission.So permission will be granted to buy more than 5 phones form us,Thank you.
                             </Typography>
                         </Box>
                     </Grid>
@@ -46,7 +46,7 @@ const Footer = () => {
                     </Grid>
                 </Grid>
                 <div>
-                    <span className='text-center'> &Copyright: NURS SCIENTIFIC PARK| {new Date().getFullYear()}</span>
+                    <span className='text-center'> &Copyright: NURS STOKES HOUSE| {new Date().getFullYear()}</span>
                 </div>
             </Container>
         </Box >
