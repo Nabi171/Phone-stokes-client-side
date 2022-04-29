@@ -6,24 +6,20 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import auth from '../firebase.init';
 const Header = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     return (
         <div>
             <nav>
-
                 <Navbar className='nav-color' expand="lg"  >
                     <Container>
-                        <Navbar.Brand href="#home" className='fw-bold'>ABRAR NU<span className='text-title'>RS ZONE
-        {/* <img src={img} className='logo-img' alt="" /> */}
+                        <Navbar.Brand href="#home" className='fw-bold'><span>
+                            {/* <img src={img} className='logo-img' alt="" /> */}
                         </span></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mx-auto">
                                 <NavLink className={({ isActive }) => isActive ? "active-link" : "link"}
-
                                     to="/home">Home</NavLink >
-
-
                                 <NavLink
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
                                     to="/blogs">Blogs</NavLink >
@@ -47,14 +43,10 @@ const Header = () => {
                                     <NavLink
                                         className={({ isActive }) => isActive ? "active-link" : "link"}
                                         to="/login">Login</NavLink >}
-
-
-
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-
             </nav>
         </div>
     );
