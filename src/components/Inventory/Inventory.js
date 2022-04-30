@@ -9,7 +9,6 @@ const Inventory = () => {
     //         .then(res => res.json())
     //         .then(data => setItems(data));
     // }, []);
-    
     return (
         <div className='container'>
             <div className='row'>
