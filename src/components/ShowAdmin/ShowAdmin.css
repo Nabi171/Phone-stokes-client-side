@@ -1,0 +1,5 @@
+.img-cont{
+    width:50px;
+    height: 50px;
+    clip-path: circle(50% at 50% 50%);
+}

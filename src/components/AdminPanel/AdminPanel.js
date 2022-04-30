@@ -4,7 +4,7 @@ import ShowAdmin from '../ShowAdmin/ShowAdmin';
 const AdminPanel = () => {
     const [members, setMembers] = useState([]);
     useEffect(() => {
-        fetch('manifest.json').then(res => res.json()).then(data => setMembers(data))
+        fetch('panel.json').then(res => res.json()).then(data => setMembers(data))
     }, [])
     return (
         <div className='container'>

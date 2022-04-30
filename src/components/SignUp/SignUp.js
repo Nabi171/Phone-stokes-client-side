@@ -69,9 +69,6 @@ const SignUp = () => {
                     <button className='form-btn' type="submit">SIGN UP</button>
                 </div>
 
-
-
-
                 <br />
                 <p className='fw bold'>Already have an account? <Link to='/login' className='text-danger pe-auto text-decoration-none fw-bold'>Please Login</Link></p>
                 <div>

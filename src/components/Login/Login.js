@@ -62,8 +62,6 @@ const Login = () => {
                             <br />
                             <button className='form-btn' type="submit">LOGIN</button>
                         </div>
-
-
                         <div>
                             <br />
                             <p>You are new user!please signup. <Link to='/signup' className='text-danger pe-auto text-decoration-none fw-bold'>Please SignUp</Link></p>
@@ -75,12 +73,9 @@ const Login = () => {
                                </button></p>
                             <OthersLogin></OthersLogin>
                         </div>
-
                     </form>
                     {/* {error && <p className='text-danger mb-0 mt-3'>{error.message}</p>}
             <br /> */}
-
-
                 </div>
 
             </div>
