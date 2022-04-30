@@ -5,6 +5,7 @@ import './Header.css'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import auth from '../firebase.init';
+import img from '../Header/phone.png';
 const Header = () => {
     const [user] = useAuthState(auth);
     return (
@@ -13,7 +14,7 @@ const Header = () => {
                 <Navbar className='nav-color' expand="lg"  >
                     <Container>
                         <Navbar.Brand href="#home" className='fw-bold'><span>
-                            {/* <img src={img} className='logo-img' alt="" /> */}
+                            <img src={img} className='w-25' alt="" />
                         </span></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">

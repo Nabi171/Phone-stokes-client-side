@@ -8,11 +8,11 @@ const Footer = () => {
             <Container>
                 <Grid container>
                     <Grid item xs={12} md={5}>
-                        <Typography variant='h5'>
-                            NURS PHONE STOKES
+                        <Typography className='heading-home' variant='h5'>
+                            AESTHETIC PHONE STOKES
                         </Typography>
                         <Box sx={{ my: '5%' }}>
-                            <Typography variant='h6'>
+                            <Typography className='heading-home' variant='h6'>
                                 About us
                             </Typography>
                             <Typography variant='body1' sx={{ textAlign: 'justify' }}>
@@ -21,7 +21,7 @@ const Footer = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={6} md={4}>
-                        <Typography variant='h6'>
+                        <Typography className='heading-home' variant='h6'>
                             Social Links
                         </Typography>
                         <Box sx={{ display: 'flex', width: '75%', justifyContent: 'space-around', mt: '5%' }}>
@@ -32,7 +32,7 @@ const Footer = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={6} md={3}>
-                        <Typography variant='h6'>
+                        <Typography className='heading-home' variant='h6'>
                             Navigate
                         </Typography>
                         <Typography variant='body1'>
@@ -46,7 +46,8 @@ const Footer = () => {
                     </Grid>
                 </Grid>
                 <div>
-                    <span className='text-center'> &Copyright: NURS STOKES HOUSE| {new Date().getFullYear()}</span>
+                    <span className='heading-home'> &Copyright: AESTHETIC
+                     STOKES HOUSE| {new Date().getFullYear()}</span>
                 </div>
             </Container>
         </Box >

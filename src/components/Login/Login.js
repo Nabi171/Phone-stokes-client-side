@@ -42,11 +42,11 @@ const Login = () => {
     }
     return (
         <div className='row bg-container align-items-center'>
-            <div className='col-lg-6 align-items-center'>
+            <div className='col-lg-6 col-sm-12 col-md-12 align-items-center'>
                 <img src={img} className='img fluid p-4' alt="" />
 
             </div>
-            <div className='col-lg-6'>
+            <div className='col-lg-6 col-sm-12 col-md-12'>
                 <div className='form-all mx-auto container' >
                     <br />
                     <form onSubmit={handleUser} className="container-form text-center form-all">

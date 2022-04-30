@@ -18,7 +18,6 @@ const AllPhones = () => {
         </div>
     );
 };
-
 export default AllPhones;
 
 
