@@ -4,14 +4,14 @@ import '../ManagePhones/ManagePhones.css'
 const ManagePhones = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/phones')
+        fetch('https://infinite-woodland-15593.herokuapp.com/phones')
             .then(res => res.json())
             .then(data => setItems(data));
     }, []);
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:4000/phones/${id}`;
+            const url = `https://infinite-woodland-15593.herokuapp.com/phones/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

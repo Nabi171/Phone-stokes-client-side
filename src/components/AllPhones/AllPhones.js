@@ -4,7 +4,7 @@ import ShowItem from '../ShowItem/ShowItem';
 const AllPhones = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/phones')
+        fetch('https://infinite-woodland-15593.herokuapp.com/phones')
             .then(res => res.json())
             .then(data => setItems(data));
     }, []);

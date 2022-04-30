@@ -23,9 +23,15 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
-        <Route path="/allphones" element={<AllPhones />} />
-        <Route path="/managephones" element={<ManagePhones />} />
-        <Route path="/additems" element={<Additems />} />
+        <Route path="/allphones" element={
+          <RequireAuth><AllPhones /></RequireAuth>
+        } />
+        <Route path="/managephones" element={
+          <RequireAuth><ManagePhones /></RequireAuth>
+        } />
+        <Route path="/additems" element={
+          <RequireAuth><Additems /></RequireAuth>
+        } />
         <Route path='/selected/:id' element={
           <RequireAuth>
             <Selected></Selected>
@@ -38,5 +44,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

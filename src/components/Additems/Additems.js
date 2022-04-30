@@ -4,7 +4,7 @@ const Additems = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:4000/phones`;
+        const url = `https://infinite-woodland-15593.herokuapp.com/phones`;
         fetch(url, {
             method: 'POST',
             headers: {

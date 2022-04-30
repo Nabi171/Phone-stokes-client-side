@@ -1,41 +1,7 @@
-// import React from 'react';
-// import goggle from '../OthersLogin/gogle.png'
-// import github from '../OthersLogin/github.png'
-// import auth from '../firebase.init';
-// import { useSignInWithGoogle, useSignInWithGithub } from 'react-firebase-hooks/auth';
-
-// import { useNavigate } from 'react-router';
-// const OthersLogin = () => {
-//     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-//     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
-//     const navigate = useNavigate();
-//     if (user || user1) {
-//         navigate('/home')
-//     }
-//     return (
-//         <div>
-//             <button
-//                 onClick={() => signInWithGoogle()}
-//                 className='btn btn-info d-block mx-auto w-50 my-2'>
-//                 <img style={{ width: '30px' }} className='me-4' src={goggle} alt="" /> <span className='px-2'>Goggle Sign In</span></button>
-//             <button
-//                 onClick={() => signInWithGithub()}
-//                 className='btn btn-info d-block mx-auto w-50 my-2'>
-//                 <img style={{ width: '30px' }} className='me-4' src={goggle} alt="" /> <span className='px-2'>Goggle Sign In</span></button>
-//         </div>
-//     );
-// };
-
-// export default OthersLogin;
-
-
 import React from 'react';
 import goggle from '../OthersLogin/gogle.png'
 import github from '../OthersLogin/github.png'
-
-
 import { useSignInWithGoogle, useSignInWithGithub } from 'react-firebase-hooks/auth';
-
 import { useNavigate } from 'react-router';
 import auth from '../firebase.init';
 import Loading from '../Loading/Loading';
