@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from 'react-bootstrap';
+import '../ManagePhones/ManagePhones.css'
 const ManagePhones = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
@@ -23,13 +24,24 @@ const ManagePhones = () => {
         }
     }
     return (
-        <div className='w-50 mx-auto'>
-            <h2>Manage your services</h2>
+        <div className='w-50 mx-auto '>
+            <br />
             {
-                items.map(item => <div key={item._id}>
-                    <Card className='shadow'>
-                        <img src={item.ImgLink} alt="" />
-                        <p>{item.Name || item.name}</p>
+                items.map(item => <div className="mt-3" key={item._id}>
+                    <Card className='shadow' mt-4>
+                        <img src={item.imageLink} className='w-25 p-4 mx-auto' alt="" />
+                        <h5 className='fw-bold'>{item.Name || item.name}</h5>
+                        <hr />
+                        <div className="d-flex align-items-center justify-content-around">
+                            <div>
+                                <h6 className='fw-bold'>Supplier Name:</h6>
+                                <h6 className='fw-bold'>Quantity:</h6>
+                            </div>
+                            <div>
+                                <h6 className='fw-bold'>{item.Supply}</h6>
+                                <h6 className='fw-bold'>{item.quantity}</h6>
+                            </div>
+                        </div>
 
 
 

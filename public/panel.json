@@ -1,0 +1,38 @@
+[
+    {
+        "Name": "Alex pauling",
+        "Status": "Admin & Ceo",
+        "id": 7,
+        "imageLink": "images/img7.jpg"
+    },
+    {
+        "Name": "Robert Hons",
+        "Status": "Co-Admin",
+        "id": 8,
+        "imageLink": "images/img8.jpg"
+    },
+    {
+        "Name": "Ricob Zecon",
+        "Status": "Manager",
+        "id": 9,
+        "imageLink": "images/img9.jpg"
+    },
+    {
+        "Name": "Flevis Alpo",
+        "Status": "Supplier",
+        "id": 10,
+        "imageLink": "images/img10.jpg"
+    },
+    {
+        "Name": "Zeson Ark",
+        "Status": "Supplier",
+        "id": 11,
+        "imageLink": "images/img11.jpg"
+    },
+    {
+        "Name": "Alex pauling",
+        "Status": "Supplier",
+        "id": 12,
+        "imageLink": "images/img12.jpg"
+    }
+]

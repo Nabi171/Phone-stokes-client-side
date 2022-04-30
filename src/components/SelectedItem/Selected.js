@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router';
+import { useParams, Navigate, useNavigate } from 'react-router';
 import { Card } from 'react-bootstrap';
 import '../SelectedItem/Selected.css'
 const items = [
@@ -60,6 +60,7 @@ const items = [
 ];
 
 const Selected = () => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const singleItem = items.find(item => item.id == id);
     return (
@@ -81,6 +82,7 @@ const Selected = () => {
                     </Card.Text>
                     <hr />
                     <p>{singleItem.description}</p>
+                    <button onClick={() => navigate('/additems')} className='form-btn '>Add and Update phones</button>
                 </Card.Body>
             </Card>
         </div>

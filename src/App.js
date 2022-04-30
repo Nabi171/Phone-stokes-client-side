@@ -14,7 +14,6 @@ import RequireAuth from './components/RequiredAuth/RequireAuth';
 import Additems from './components/Additems/Additems';
 import AllPhones from './components/AllPhones/AllPhones';
 import ManagePhones from './components/ManagePhones/ManagePhones';
-
 function App() {
   return (
     <div className="App">
