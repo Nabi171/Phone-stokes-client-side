@@ -1,27 +1,8 @@
-.banner-img {
 
-    background-image: url(../TopBanner/banner.jpg);
-    background-size: cover;
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-position-y: 70%;
-}
-
-.banner-overlay {
-
-    /* background: rgba(0, 0, 0, 0.699); */
-    height: 100%;
-}
-
-
-.clip-me { 
-
-  
-    /* polygon */
-    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
- 
-}
 .banner-container{
     background-color: #051622;
     color: #DEB992;
+}
+.banner-container2{
+    color: #051622;
 }

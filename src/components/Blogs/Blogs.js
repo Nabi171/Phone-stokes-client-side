@@ -4,9 +4,9 @@ import '../Blogs/Blogs.css';
 
 const Blogs = () => {
     return (
-        <div className='container'>
-            <Card className='mt-4 mx-3 blogs-container'>
-                <Card.Body>
+        <div className='container '>
+            <Card className='mt-4 mx-3 '>
+                <Card.Body className='blogs-container'>
                     <Card.Title className='text-danger pt-1 mt-1'>Difference between javascript and nodejs</Card.Title>
                     <hr />
                     <Table striped bordered hover size="sm">
@@ -43,8 +43,8 @@ const Blogs = () => {
                 </Card.Body>
             </Card>
 
-            <Card className='mt-4 mx-3 blogs-container'>
-                <Card.Body>
+            <Card className='mt-4 mx-3'>
+                <Card.Body className='blogs-container'>
                     <Card.Title className='text-danger pt-1 mt-1'>3 Differences between sql and nosql databases.</Card.Title> <hr />
                     <Table striped bordered hover size="sm">
                         <thead>
@@ -82,17 +82,41 @@ const Blogs = () => {
 
 
             <Card className='mt-4 blogs-container'>
-                <Card.Title className='text-danger pt-1 mt-1'>What other services does firebase provide other than authentication?</Card.Title>
-                <hr />
-                <p className='p-3'>
-                    <strong>Mostly we used firebase for authentication,</strong>where users identity manintain the users data in the site used firebase authentication besides it provides more service like backend progam services,use SDKs and made UI libraries also to authenticate users your site.
-                    By using firebase it is easy to implement authentication and authorization system ,it is a third party app to control the authorization.So it has more security than custom authentication and authorization system,thats why its more reliable.
-Usually, authentication by a server entails the use of a user name and password. Other ways to authenticate can be through cards, retina scans, voice recognition, and fingerprints.
-
+                <Card.Body className='blogs-container'>
+                    <Card.Title className='text-danger pt-1 mt-1 '>When should you use nodejs and when should you use mongodb</Card.Title>
+                    <hr />
+                    <p className='p-3'>
+                        <strong>Mostly Node js is maily open source ,</strong>server environment where javascript on the server to develop application,besides mongoDB helps to connect backed to execute the fullstack code.Maninly Node js a single threated language which process the code asynchronously where the requests asynchronously blcking I/O tasks to the internal thread pool to handle any intensive operation.specially its works asygnchoronously executbe the program.
+                 <br />
+                        Besides MongoDb facilitate to store database nin json this is best path for sotre data where stored more collections of Node js path.So,i think that mongoDB is the best method to store data in MongoDB json.
             </p>
-
-
+                </Card.Body>
             </Card>
+
+
+            <Card className='mt-4 blogs-container'>
+                <Card.Body className='blogs-container'>
+                    <Card.Title className='text-danger pt-1 mt-1 '>What is the purpose of jwt and how does it work</Card.Title>
+                    <hr />
+                    <p className='p-3'>
+                        <strong>JWT means JSON web Token</strong>which is mainly used for security purpose where its try to make safe your data,if anyone can try to access your data,its will be impossible for him because JWt,which is the best path to make safe your data as anyone can not access your data for token issured which make secure your from the third party.
+            </p>
+                </Card.Body>
+            </Card>
+
+
+            <Card className='mt-4 blogs-container'>
+                <Card.Body className='blogs-container'>
+                    <Card.Title className='text-danger pt-1 mt-1 '>stack overflow qustion?</Card.Title>
+                    <hr />
+                    <p className='p-3'>
+                        <strong>Question: <a href="https://stackoverflow.com/questions/72070945/website-scrolls-to-top-on-reload-in-swift-webview-html-css/72071280#72071280" className='text-decoration-none'> Clik Here</a></strong> <br />
+                        <strong>Answer: <a href="https://stackoverflow.com/users/18429851/md-nabiul-bashar" className='text-decoration-none'>Click Here</a></strong> <br />
+                    </p>
+                </Card.Body>
+            </Card>
+
+
 
 
         </div>
