@@ -34,7 +34,7 @@ const Additems = () => {
                     <input placeholder='supplier name' {...register("Supply")} className="form-input" type="text" />
 
                     <label className='form-label'>Price</label>
-                    <input placeholder='supplier name' {...register("price")} className="form-input" type="number" />
+                    <input placeholder='price' {...register("price")} className="form-input" type="number" />
 
                     <label className='form-label'>Description</label>
                     <input placeholder='Description' {...register("description")} className="form-input" type="text" />

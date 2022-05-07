@@ -13,6 +13,28 @@ const Selected = () => {
             .then(data => setItems(data));
     }, []);
 
+    //state for delevered btn
+    let deliver = singleItem.quantity;
+    let newCount = parseInt(deliver);
+    const [count, setCount] = useState(10);
+
+    const increamentCount = () => {
+        const remainingItem = setCount(newCount - 1);
+        return remainingItem;
+    }
+
+    const updateValue = () => {
+        const remainingItemNumber = document.getElementById('countNo').innerText;
+        console.log(remainingItemNumber)
+        const inputNumberText = document.getElementById('updating').value;
+        console.log(inputNumberText);
+        const inputNumber = parseFloat(inputNumberText);
+        const newUpdate = inputNumber + parseInt(remainingItemNumber);
+        console.log(newUpdate);
+        setCount(newUpdate);
+    }
+
+
     return (
         <div className='container text-dark '>
             <Card className='w-50 mx-auto my-5 selected-container '>
@@ -24,7 +46,7 @@ const Selected = () => {
                         Supplier Name: {singleItem.Supply}
                     </Card.Text>
                     <Card.Text className='fw-bold text-dark'>
-                        Quantity: {singleItem.quantity}
+                        Quantity: <span id="countNo" >{count}</span>
                     </Card.Text>
 
                     <Card.Text >
@@ -35,6 +57,26 @@ const Selected = () => {
                     <button onClick={() => navigate('/additems')} className='form-btn '>Add and Update phones</button>
                 </Card.Body>
             </Card>
+            <Card className='justify-content-center align-items-center text-center selected-container'>
+                <div className='w-50 mx auto text-center'>
+                    <input id="updating" className="form-input mx-auto" type="number" placeholder="update the phones number" />
+                    <br />
+                    <button onClick={updateValue} className='btn btn-outline-danger mb-2'>Update Quantity</button>
+
+                </div>
+
+            </Card>
+            <br />
+            <Card className='justify-content-center align-items-center text-center selected-container'>
+                <div className='w-50 mx auto text-center'>
+                    <h3>Delevere The Selected Phone</h3>
+                    <br />
+                    <button className='btn btn-outline-danger mb-2' onClick={increamentCount}>Delevered</button>
+
+                </div>
+
+            </Card>
+            <br />
         </div>
     );
 };
