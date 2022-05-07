@@ -7,7 +7,7 @@ const Selected = () => {
     const { id } = useParams();
     const [singleItem, setItems] = useState([]);
     useEffect(() => {
-        const url=`https://infinite-woodland-15593.herokuapp.com/phones/${id}`;
+        const url = `https://infinite-woodland-15593.herokuapp.com/phones/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));
@@ -24,7 +24,7 @@ const Selected = () => {
                         Supplier Name: {singleItem.Supply}
                     </Card.Text>
                     <Card.Text className='fw-bold text-dark'>
-                        Quantity: ${singleItem.quantity}
+                        Quantity: {singleItem.quantity}
                     </Card.Text>
 
                     <Card.Text >
