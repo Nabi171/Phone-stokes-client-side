@@ -1,68 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Navigate, useNavigate } from 'react-router';
 import { Card } from 'react-bootstrap';
 import '../SelectedItem/Selected.css'
-const items = [
-    {
-        "Name": "I Phone",
-        "Supply": "Jk Rowling",
-        "id": 1,
-        "price": 1500,
-        "quantity": 10,
-        "imageLink": "https://i.ibb.co/tcNc1nT/img1.jpg",
-        "description": "here stoked geneiune IPhone items for customers,here they get best relaible items for their customers."
-    },
-    {
-        "Name": "Samsung",
-        "Supply": "Robert Hesson",
-        "id": 2,
-        "price": 800,
-        "quantity": 11,
-        "imageLink": "https://i.ibb.co/jgymRr6/img2.jpg",
-        "description": "here stoked geneiune SamSung items for customers,here they get best relaible items for their customers."
-    },
-    {
-        "Name": "Real Me",
-        "Supply": "Roberson Kendy",
-        "id": 3,
-        "price": 500,
-        "quantity": 15,
-        "imageLink": "https://i.ibb.co/NN7msVj/img3.jpg",
-        "description": "here stoked geneiune Real ME items for customers,here they get best relaible items for their customers."
-    },
-    {
-        "Name": "Vivo",
-        "Supply": "Henderson",
-        "id": 4,
-        "price": 700,
-        "quantity": 11,
-        "imageLink": "https://i.ibb.co/qsLvXMB/img4.jpg",
-        "description": "here stoked geneiune vivo items for customers,here they get best relaible items for their customers."
-    },
-    {
-        "Name": "Infinix",
-        "Supply": "Leripage",
-        "id": 5,
-        "price": 900,
-        "quantity": 8,
-        "imageLink": "https://i.ibb.co/r4Ftrbd/img5.jpg",
-        "description": "here stoked geneiune Infinix items for customers,here they get best relaible items for their customers."
-    },
-    {
-        "Name": "One Plus",
-        "Supply": "Maek Louius",
-        "id": 6,
-        "price": 950,
-        "quantity": 15,
-        "imageLink": "https://i.ibb.co/YdSP2WF/img6.jpg",
-        "description": "here stoked geneiune One Plus items for customers,here they get best relaible items for their customers."
-    }
-];
-
 const Selected = () => {
     const navigate = useNavigate();
     const { id } = useParams();
-    const singleItem = items.find(item => item.id == id);
+    const [singleItem, setItems] = useState([]);
+    useEffect(() => {
+        const url=`https://infinite-woodland-15593.herokuapp.com/phones/${id}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setItems(data));
+    }, []);
+
     return (
         <div className='container text-dark '>
             <Card className='w-50 mx-auto my-5 selected-container '>

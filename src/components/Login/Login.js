@@ -74,8 +74,8 @@ const Login = () => {
                             <OthersLogin></OthersLogin>
                         </div>
                     </form>
-                    {/* {error && <p className='text-danger mb-0 mt-3'>{error.message}</p>}
-            <br /> */}
+                    {error && <p className='text-danger mb-0 mt-3'>{error.message}</p>}
+                    <br />
                 </div>
 
             </div>
