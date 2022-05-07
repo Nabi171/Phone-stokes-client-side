@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import useItems from '../hooks/useItems';
 import ShowItem from '../ShowItem/ShowItem';
 const Inventory = () => {
-    // const [items, setItems] = useItems();
     const [items, setItems] = useState([]);
     useEffect(() => {
         fetch('https://infinite-woodland-15593.herokuapp.com/phones')

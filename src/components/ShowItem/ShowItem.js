@@ -3,7 +3,7 @@ import { Col, Card, Button } from 'react-bootstrap';
 import '../ShowItem/ShowItem.css'
 import { useNavigate } from 'react-router';
 const ShowItem = (props) => {
-    const { Name, imageLink, id, price, quantity } = props.item;
+    const { Name, imageLink, _id, price, quantity } = props.item;
     const navigate = useNavigate();
     return (
         <div className='col-lg-4 col-12 col-sm-12 col-md-6 g-4 '>
@@ -23,7 +23,7 @@ const ShowItem = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <button className=' btn btn-outline-danger fw-bold'
-                        onClick={() => navigate('/selected/' + id)}
+                        onClick={() => navigate('/selected/' + _id)}
                     >Update</button>
                 </Card>
             </Col>

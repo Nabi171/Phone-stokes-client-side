@@ -19,7 +19,7 @@ const Selected = () => {
                 <br />
                 <Card.Img variant="top" src={singleItem.imageLink} className='img-fluid ' />
                 <Card.Body>
-                    <Card.Title className='fw-bold text-dark'>{singleItem.Name}</Card.Title>
+                    <Card.Title className='fw-bold text-dark'>{singleItem.name}</Card.Title>
                     <Card.Text className='fw-bold text-dark' style={{ color: '#fefbe9 ' }}>
                         Supplier Name: {singleItem.Supply}
                     </Card.Text>
