@@ -59,6 +59,16 @@ const Selected = () => {
             </Card>
             <Card className='justify-content-center align-items-center text-center selected-container'>
                 <div className='w-50 mx auto text-center'>
+                    <h6 className='mt-2 fw-bold'>Delever The Selected Phone</h6>
+                    <br />
+                    <button className='btn btn-outline-danger mb-2' onClick={increamentCount}>Delevered</button>
+
+                </div>
+
+            </Card>
+            <br />
+            <Card className='justify-content-center align-items-center text-center selected-container'>
+                <div className='w-50 mx auto text-center'>
                     <input id="updating" className="form-input mx-auto" type="number" placeholder="update the phones number" />
                     <br />
                     <button onClick={updateValue} className='btn btn-outline-danger mb-2'>Update Quantity</button>
@@ -67,16 +77,7 @@ const Selected = () => {
 
             </Card>
             <br />
-            <Card className='justify-content-center align-items-center text-center selected-container'>
-                <div className='w-50 mx auto text-center'>
-                    <h3>Delevere The Selected Phone</h3>
-                    <br />
-                    <button className='btn btn-outline-danger mb-2' onClick={increamentCount}>Delevered</button>
 
-                </div>
-
-            </Card>
-            <br />
         </div>
     );
 };
