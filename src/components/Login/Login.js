@@ -8,7 +8,7 @@ import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-
 import auth from '../firebase.init';
 import Loading from '../Loading/Loading';
 import { useNavigate } from 'react-router';
-
+import axios from 'axios';
 const Login = () => {
     //for reset password
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(
@@ -41,6 +41,10 @@ const Login = () => {
     const handleUser = async (e) => {
         e.preventDefault();
         await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('https://phone-stokes.web.app/login', { email });
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate('/home');
+
     }
     return (
         <div className='row bg-container align-items-center'>
