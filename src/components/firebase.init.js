@@ -4,14 +4,15 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "@firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBW5KqRzn5FePqpb8bvMBQU-1olMWZlFwg",
-    authDomain: "phone-stokes.firebaseapp.com",
-    projectId: "phone-stokes",
-    storageBucket: "phone-stokes.appspot.com",
-    messagingSenderId: "8587698865",
-    appId: "1:8587698865:web:40632209bed0f44b07b890",
-    measurementId: "G-C2RC6PM5P7"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
+
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
