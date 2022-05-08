@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import '../Login/Login.css'
 import OthersLogin from '../OthersLogin/OthersLogin';
 import img from '../Login/keki.png';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
 import Loading from '../Loading/Loading';
+import { useNavigate } from 'react-router';
+
 const Login = () => {
     //for reset password
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(

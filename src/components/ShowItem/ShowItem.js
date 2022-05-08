@@ -8,7 +8,7 @@ const ShowItem = (props) => {
     return (
         <div className='col-lg-4 col-12 col-sm-12 col-md-6 g-4 '>
             <Col>
-                <Card className='cards-container card-container selected-container '>
+                <Card className='cards-container card-container selected-container'>
                     <Card.Img variant="top" className='img-container   mx-auto  ' src={imageLink} />
                     <Card.Body>
                         <Card.Title >{name}</Card.Title>
@@ -21,7 +21,7 @@ const ShowItem = (props) => {
                         <Card.Text>
                             <span className='fw-bold'>Featuere:</span>{description}
                         </Card.Text>
-                        <hr/>
+                        <hr />
                         <Card.Text>
                             <span className='fw-bold'>Stokes:</span>{quantity}
                         </Card.Text>
